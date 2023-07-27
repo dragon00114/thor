@@ -1,0 +1,138 @@
+AllCops:
+  TargetRubyVersion: 2.6
+  DisabledByDefault: true
+  SuggestExtensions: false
+  Exclude:
+    - spec/sandbox/**/*
+    - spec/fixtures/**/*
+    - vendor/bundle/**/**
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19
+
+# No spaces inside hash literals
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+# Enforce outdenting of access modifiers (i.e. public, private, protected)
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: true
+
+# Align ends correctly
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+  Exclude:
+    - 'lib/thor/actions.rb'
+    - 'lib/thor/error.rb'
+    - 'lib/thor/shell/basic.rb'
+    - 'lib/thor/parser/option.rb'
+
+# Indentation of when/else
+Layout/CaseIndentation:
+  EnforcedStyle: end
+  IndentOneStep: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Lint/AssignmentInCondition:
+  Exclude:
+    - 'lib/thor/line_editor/readline.rb'
+    - 'lib/thor/parser/arguments.rb'
+
+Security/Eval:
+  Exclude:
+    - 'spec/helper.rb'
+
+Lint/SuppressedException:
+  Exclude:
+    - 'lib/thor/line_editor/readline.rb'
+
+Lint/PercentStringArray:
+  Exclude:
+    - 'spec/parser/options_spec.rb'
+
+Lint/UnusedMethodArgument:
+  Exclude:
+    - 'lib/thor.rb'
+    - 'lib/thor/base.rb'
+    - 'lib/thor/command.rb'
+    - 'lib/thor/parser/arguments.rb'
+    - 'lib/thor/shell/html.rb'
+    - 'spec/actions/empty_directory_spec.rb'
+    - 'spec/fixtures/invoke.thor'
+
+Naming/AccessorMethodName:
+  Exclude:
+    - 'lib/thor/line_editor/basic.rb'
+    - 'spec/fixtures/group.thor'
+    - 'spec/sandbox/group.thor'
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'lib/thor/group.rb'
+    - 'lib/thor/runner.rb'
+    - 'spec/shell_spec.rb'
+    - 'spec/util_spec.rb'
+
+Style/ClassVars:
+  Exclude:
+    - 'lib/thor/util.rb'
+    - 'spec/util_spec.rb'
+
+Naming/ConstantName:
+  Exclude:
+    - 'spec/line_editor_spec.rb'
+
+Style/GlobalVars:
+  Exclude:
+    - 'bin/thor'
+    - 'lib/thor.rb'
+    - 'lib/thor/base.rb'
+    - 'lib/thor/shell/basic.rb'
+    - 'spec/helper.rb'
+    - 'spec/rake_compat_spec.rb'
+    - 'spec/register_spec.rb'
+    - 'spec/thor_spec.rb'
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Lint/MissingSuper:
+  Exclude:
+    - 'lib/thor/error.rb'
+    - 'spec/rake_compat_spec.rb'
+
+Style/MissingRespondToMissing:
+  Exclude:
+    - 'lib/thor/core_ext/hash_with_indifferent_access.rb'
+    - 'lib/thor/runner.rb'
+    - 'spec/fixtures/script.thor'
+    - 'spec/sandbox/script.thor'
+
+Style/NumericLiteralPrefix:
+  Exclude:
+    - 'spec/actions/file_manipulation_spec.rb'
+
+Style/NumericPredicate:
+  Exclude:
+    - 'spec/**/*'
+    - 'lib/thor/parser/option.rb'
+
+Style/PerlBackrefs:
+  Exclude:
+    - 'lib/thor/actions/empty_directory.rb'
+    - 'lib/thor/core_ext/hash_with_indifferent_access.rb'
+    - 'lib/thor/parser/arguments.rb'
+    - 'lib/thor/parser/options.rb'
+
+Style/TrailingUnderscoreVariable:
+  Exclude:
+    - 'lib/thor/group.rb'
+
+Layout/TrailingWhitespace:
+  Exclude:
+    - 'spec/shell/basic_spec.rb'
